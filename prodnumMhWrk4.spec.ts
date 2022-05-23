@@ -22,8 +22,8 @@ describe('Check Number of products in category', () => {
         cy.contains('Billboard').click();
         cy.log("Logging started her");
      
-     cy.get('.products li').eq(1).find('mark').then((elem) => {
-          const prodcnt = Number(elem.text()[0]);
+     cy.get('.products li').eq(3).find('mark').then((elem) => {
+          const prodcnt = Number(elem.text()[0]+elem.text()[1]);
           console.log('console log prodcnt ' + prodcnt);
           cy.log('cY log prodcnt ' + prodcnt);
 
